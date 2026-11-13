@@ -1,0 +1,257 @@
+PRIVACY POLICY
+
+Last updated: November 13, 2026
+
+This Privacy Policy describes how Alltoscan LLC ("we", "our", or "us") collects, uses, and protects information in connection with the WATS Wallet Chrome browser extension (the "Extension").
+
+1. Scope
+
+This Privacy Policy applies solely to the WATS Wallet Chrome Extension and its related services. It does not cover the WATS Wallet mobile application or NFC cards.
+
+2. Information We Collect
+
+We are committed to minimizing data collection.
+
+2.1 Personal Data
+
+We do not collect, store, or process personally identifiable information that directly identifies you, such as name, email address, phone number, or government identifiers, through the Extension.
+
+During first-time setup you choose a username, which is stored on our servers (see Section 2.5). A username could identify you if you use your real name, so we recommend that you do not.
+
+If you agree to usage statistics, the Extension generates a random install identifier (see Section 2.4). It is a pseudonymous identifier: it is not a name, email address, or other real-world identifier, and it is not derived from your wallet.
+
+2.2 Wallet and Cryptographic Data
+
+Private keys, seed phrases, and cryptographic secrets are generated and stored locally on the user’s device.
+
+These data are never transmitted to our servers.
+
+All cryptographic operations (key generation, signing, encryption) are performed client-side.
+
+2.3 Network and Transaction Data
+
+To provide blockchain functionality, the Extension communicates with:
+
+Public or private third-party RPC providers
+
+Backend infrastructure operated by Alltoscan LLC
+
+The third-party services listed in Section 6
+
+During these interactions, the following technical data may be transmitted:
+
+Public wallet addresses
+
+Transaction payloads and signed transactions
+
+Blockchain network identifiers
+
+IP address and standard network metadata
+
+We do not try to match this data to real-world identities and do not use it for tracking or profiling.
+
+Some transactions are sent through our transaction server. The records we keep of them are described in Section 2.6.
+
+The usage statistics described in Section 2.4 are separate from these interactions. They do not contain wallet addresses, transaction contents or blockchain network identifiers; like any internet request, they do reach our server together with your IP address, as explained in Section 2.4.
+
+2.4 Usage Analytics
+
+If you agree, the Extension sends a small usage statistics message to backend infrastructure operated by Alltoscan LLC. It is used only to measure how many installations of the Extension are active, which Extension versions are in use, and how often its main features are used.
+
+What is sent. The usage statistics message contains only:
+
+A randomly generated install identifier (a random number created on your device after you agree)
+
+The Extension version
+
+The language of your browser interface, as a language code that may include a region (for example "en", "tr" or "en-US")
+
+The number of actions since the last message, by type: transfers, swaps (including purchases and sales made in the Extension), bridge transfers, wallets imported and wallets created. A transfer, swap or bridge transfer is counted when it is submitted, whether or not it later succeeds.
+
+Nothing else is included in the message itself. The usage statistics never include wallet addresses, private keys, seed phrases, balances, amounts, tokens, blockchain networks, transaction contents, or websites you visit.
+
+When it is sent. At most once per day. If a send fails, the Extension may try again later, but a successful report is sent no more than once per day. Action counts are kept on your device until they are sent or, if a send cannot be confirmed, discarded.
+
+What we store. For each installation we store only:
+
+The install identifier
+
+The date (day only, without time of day) on which the installation was first seen
+
+The most recently reported Extension version and language code
+
+The list of days (dates only) on which the installation sent its daily message
+
+The number of actions of each type reported on each of those days
+
+We do not store your IP address, browser user-agent, other request headers, or the exact time of the message in this record, and we do not link the install identifier to wallet addresses or to any other record we hold.
+
+IP address and request metadata. Like any internet request, the usage statistics message reaches our server together with standard network metadata, such as your IP address, your browser’s user-agent and the origin of the Extension. Our application does not save this metadata in the install record or write it to its logs; your IP address (for IPv6, its network prefix) is held only in the server’s memory, for up to 24 hours, to limit abusive request rates. Our web server does not keep access logs, so your IP address and the time of the request are not recorded in an access log. If a request fails, the web server’s error log can record its IP address and requested address; error logs are deleted automatically after about 14 days.
+
+Why. We use usage statistics solely to measure active installations, the adoption of Extension versions and how often the main features are used, so that we can maintain and improve the Extension. We analyze them in aggregated form, such as the number of active installations, how many installations return after a given number of days, the distribution of versions, and the number of actions and of installations performing them. We do not use them for marketing, advertising, profiling, or resale, and we do not send them to any third-party analytics or advertising service.
+
+Your control. Usage statistics stay off until you agree. The Extension asks for your agreement in a short dialog, and nothing is collected or sent before you agree or if you decline. You can turn usage statistics on or off at any time in Settings > Preferences. When you turn them off, the Extension sends no further usage statistics and deletes the install identifier and any unsent action counts stored on your device. If you turn them on again later, a new identifier is generated that is not connected to the previous one. Data that was already sent remains on our servers and is used only in aggregated statistics. Uninstalling the Extension or clearing its browser storage also removes the identifier and unsent action counts from your device.
+
+Private mode. While private mode is on (your Private Account is active), the Extension does not count actions and sends no usage statistics message.
+
+Other data. Apart from the action counts described above, we do not collect behavioral analytics such as the screens you open or the buttons you press, browsing history, visited URLs, or advertising identifiers.
+
+2.5 Profile Data
+
+When you set up the Extension for the first time, with a new or imported wallet, you choose a username. We store on our servers your username, a randomly generated user identifier, the public address of that wallet and its network, and the dates on which the record was created and last changed.
+
+Wallets you add later do not create a new profile.
+
+Anyone can check whether a username is taken, and looking up a username returns the username and the user identifier. These responses do not include your wallet address.
+
+We keep this record until you ask us to delete it (see Section 7). We do not link it to the usage statistics described in Section 2.4.
+
+2.6 Transaction and Purchase Records
+
+Transactions whose network fees are paid through our fee service (for example with ATS), and ATS purchases made in the Extension, are sent by your browser to our transaction server, which is operated by Alltoscan LLC. This server keeps the following records.
+
+Transaction record. For every transaction sent through it, we store the sending wallet address, the transaction hash, the block number, the gas used, the addresses of the contracts called, and the transfer details, including recipient addresses and amounts.
+
+ATS purchase record. A purchase record is created as soon as you request a price quote, even if you do not complete the purchase. It contains your wallet address, the payment token and amount, the quote identifier, the time of the quote and the time until which it is valid, the amount of ATS, its US dollar value, the price applied, the reference price, the commission, the details of the network fee we pay for the purchase (such as the nonce, the gas limit and the validity period), the result or error message and, once the purchase is sent, its transaction hash.
+
+Abuse prevention. To prevent abuse of the network fees we pay on your behalf, we keep counters linked to wallet addresses. Timestamps used to limit purchase requests are deleted after 1 hour. The counter for the one-time setup that lets a wallet pay network fees with ATS, for which we pay the network fee, is deleted after 30 days. Addresses that have used up this setup allowance are kept on a list without a time limit, so that the allowance is not granted again.
+
+IP address. The transaction server does not write your IP address to its records or application logs, and its web server does not keep access logs. Your IP address is held only in memory, for a few minutes, to limit abusive request rates. If a request fails, the web server’s error log can record the IP address and the requested address of that request, as described in Section 5.
+
+The wallet addresses, amounts, contract addresses and transaction hashes of sent transactions are also recorded permanently on the public blockchain, where no one, including us, can delete them.
+
+These records are kept as described in Section 5. We do not link them to the usage statistics described in Section 2.4.
+
+3. How We Use Information
+
+Information transmitted to backend services and RPC providers is used solely to:
+
+Broadcast blockchain transactions
+
+Query balances and blockchain state
+
+Synchronize wallet data
+
+Provide swaps, bridge transfers and network fee payment
+
+Provide ATS purchases
+
+Keep records of ATS purchases and of transactions sent through our servers, and prevent abuse of the network fees we pay on your behalf (Section 2.6)
+
+Provide private transfers, swaps and bridges in private mode
+
+Check recipient addresses for known risks
+
+Show transaction history, prices and images
+
+Maintain your profile (Section 2.5)
+
+Measure active installations, Extension version adoption and feature usage through the usage statistics described in Section 2.4
+
+We do not use data for marketing, advertising, profiling, or resale.
+
+4. Data Sharing and Disclosure
+
+We do not sell, rent, or trade user data.
+
+We may share limited technical data with:
+
+Third-party RPC providers
+
+Infrastructure partners necessary for blockchain connectivity
+
+The third-party services listed in Section 6
+
+Such sharing is limited to providing the features of the Extension.
+
+We do not share usage statistics (Section 2.4) with third parties, other than service providers that host our infrastructure on our behalf. Only aggregated figures are available through our reporting interface. Access to the aggregated figures requires a secret key held by our team.
+
+We may disclose information if required by applicable law, regulation, or valid legal process.
+
+5. Data Storage and Security
+
+Private keys and seed phrases are encrypted and stored locally on your device. Other information the Extension keeps on your device, such as transaction records and private mode orders, is stored in the Extension’s local browser storage.
+
+Backend systems do not store private keys, seed phrases, or passwords.
+
+Profile records (Section 2.5) are stored on our backend until you ask us to delete them.
+
+Transaction and purchase records (Section 2.6) are stored on our backend. They are kept without a fixed time limit. Abuse prevention counters are kept for the periods described in Section 2.6.
+
+Usage statistics records (Section 2.4) are stored on our backend. Usage statistics records, including action counts, are deleted automatically once an installation has not sent a message for 13 months.
+
+Temporary technical logs are kept for security, debugging and service reliability.
+
+Application logs on our servers are deleted automatically after about 30 days. They mainly contain error messages and, on our transaction server, transaction identifiers, which can be linked to wallet addresses on the public blockchain. For some operations, and in error details, they can also contain wallet addresses and transaction data.
+
+Our web servers do not keep access logs. Their error logs are deleted automatically after about 14 days. When a request fails, the error log can record the IP address and the requested address of that request; for some requests, such as status checks, the requested address includes your wallet address.
+
+We apply industry-standard security controls to protect transmitted and stored data.
+
+6. Third-Party Services
+
+The Extension interacts with decentralized blockchain networks and third-party services. These third parties operate independently and are governed by their own privacy policies.
+
+Services your browser contacts directly. These services can see your IP address and the data listed:
+
+RPC providers, including any custom RPC you add: wallet addresses, transaction data and signed transactions
+
+LI.FI: wallet addresses, tokens and amounts, for bridge quotes
+
+SilentSwap: in private mode, the address you pay from, the receiving address, the source and destination networks, tokens and amounts, the order identifier and the transaction hash of your deposit, for private transfers, swaps and bridges
+
+CoW Protocol: wallet addresses, tokens, amounts and signed orders, for tokenized stock trades
+
+xStocks issuer API: the symbol of the tokenized stock you view or trade, to show whether its market is open
+
+CoinGecko: token identifiers, for prices
+
+OpenChain: function identifiers of transactions requested by websites, to show what they do
+
+Google Fonts: font requests
+
+GitHub (Trust Wallet token logo repository): outside private mode, the network and contract address of tokens shown in your lists, to load their logos
+
+Image hosts and connected websites: token logos, website icons and connection files
+
+Services contacted through our servers. These services receive the data listed, but not your IP address:
+
+GoPlus: recipient addresses, for risk checks
+
+Moralis: wallet addresses, for transaction history
+
+TON Center: TON wallet addresses and signed transactions
+
+STON.fi: tokens and amounts, for TON swap quotes
+
+Pimlico: wallet addresses and transaction data, for paying network fees with tokens
+
+CoinGecko: token identifiers, for prices and charts
+
+We are not responsible for the privacy or security practices of third-party blockchain nodes, RPC endpoints, or external services.
+
+7. User Rights
+
+We do not ask for your name, email address or phone number. Apart from temporary technical logs, the records we keep on our servers that relate to you are the profile described in Section 2.5, the transaction and purchase records described in Section 2.6 and the usage statistics described in Section 2.4.
+
+You can ask us to delete your profile by contacting us (see Section 10). We may ask you to sign a message with the wallet to confirm that it is yours. Uninstalling the Extension does not delete your profile.
+
+Transaction and purchase records (Section 2.6) are kept without a fixed time limit, as described in Section 5. Information recorded on the public blockchain cannot be deleted by anyone.
+
+Users may remove all locally stored wallet data by uninstalling the Extension or clearing browser storage.
+
+Users may stop usage statistics at any time in Settings > Preferences, as described in Section 2.4. Because the install identifier is random and is deleted from your device when you turn usage statistics off, we cannot later look up the record that belonged to your installation; such records are deleted automatically after the retention period described in Section 5 and are used only in aggregated statistics.
+
+8. Children’s Privacy
+
+The Extension is not intended for use by individuals under the age of 18. We do not knowingly collect information from minors.
+
+9. Changes to This Policy
+
+We may update this Privacy Policy from time to time. Updates will be reflected by revising the "Last updated" date and publishing the revised policy in the Extension listing or website.
+
+10. Contact
+
+If you have questions about this Privacy Policy, contact us at:
+
+Email: info@alltoscan.com Company: Alltoscan LLC

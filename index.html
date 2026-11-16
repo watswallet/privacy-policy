@@ -129,7 +129,7 @@
       <h1>Privacy Policy</h1>
       <p class="intro">This Privacy Policy describes how Alltoscan LLC ("we", "our", or "us") collects, uses, and protects information in connection with the WATS Wallet Chrome browser extension (the "Extension").</p>
       <dl class="facts">
-        <div><dt>Last updated</dt><dd>November 13, 2026</dd></div>
+        <div><dt>Last updated</dt><dd>November 16, 2026</dd></div>
         <div><dt>Applies to</dt><dd>WATS Wallet Chrome extension</dd></div>
         <div><dt>Company</dt><dd>Alltoscan LLC</dd></div>
         <div><dt>Contact</dt><dd><a href="mailto:info@watswallet.com">info@watswallet.com</a></dd></div>
@@ -190,6 +190,7 @@
         <p>We do not try to match this data to real-world identities and do not use it for tracking or profiling.</p>
         <p>Some transactions are sent through our transaction server. The records we keep of them are described in <a href="#s-2-6">Section 2.6</a>.</p>
         <p>The usage statistics described in <a href="#s-2-4">Section 2.4</a> are separate from these interactions. They do not contain wallet addresses, transaction contents or blockchain network identifiers; like any internet request, they do reach our server together with your IP address, as explained in <a href="#s-2-4">Section 2.4</a>.</p>
+        <p>The country check for tokenized stocks described in <a href="#s-2-7">Section 2.7</a> is also separate from these interactions. Its request contains no wallet addresses, transaction contents or blockchain network identifiers; like any internet request, it reaches our server together with your IP address, as explained in <a href="#s-2-7">Section 2.7</a>.</p>
         <h3 id="s-2-4"><span class="num">2.4</span>Usage Analytics</h3>
         <p>If you agree, the Extension sends a small usage statistics message to backend infrastructure operated by Alltoscan LLC. It is used only to measure how many installations of the Extension are active, which Extension versions are in use, and how often its main features are used.</p>
         <p><strong>What is sent.</strong> The usage statistics message contains only:</p>
@@ -228,6 +229,23 @@
         <p><strong>IP address.</strong> The transaction server does not write your IP address to its records or application logs, and its web server does not keep access logs. Your IP address is held only in memory, for a few minutes, to limit abusive request rates. If a request fails, the web server’s error log can record the IP address and the requested address of that request, as described in <a href="#s-5">Section 5</a>.</p>
         <p>The wallet addresses, amounts, contract addresses and transaction hashes of sent transactions are also recorded permanently on the public blockchain, where no one, including us, can delete them.</p>
         <p>These records are kept as described in <a href="#s-5">Section 5</a>. We do not link them to the usage statistics described in <a href="#s-2-4">Section 2.4</a>.</p>
+        <h3 id="s-2-7"><span class="num">2.7</span>Country Check for Tokenized Stocks</h3>
+        <p>The Extension lets you buy tokenized stocks. Which tokenized stocks the Extension offers for purchase depends on the country you connect from, so the Extension asks our server for the purchase rules and for the country of your internet connection.</p>
+        <p><strong>What is sent.</strong> The Extension sends one plain request to backend infrastructure operated by Alltoscan LLC. It is the same for every user. It contains no wallet address, username, account identifier, install identifier or cookie, and it does not say which stock you are looking at. Like any internet request, it reaches our server together with your IP address and standard network metadata.</p>
+        <p><strong>When it is sent.</strong> The Extension sends it when you:</p>
+        <ul>
+          <li>Open the Stocks tab, or the page or trade screen of a tokenized stock</li>
+          <li>Open the list of tokens you can receive in a swap or bridge, on a network where tokenized stocks can be received</li>
+          <li>Select a tokenized stock in a swap, bridge or purchase screen, request a quote for one, or submit a transaction that would deliver one</li>
+        </ul>
+        <p>The Extension reuses a country result for up to 10 minutes. After a failed request, or when no country could be found, it waits about a minute before asking again.</p>
+        <p><strong>How the country is found.</strong> Our server looks up your IP address in a country database that is stored on the server (the “IP to Country Lite” database by DB-IP, licensed under CC BY 4.0). The lookup is made on our server, and your IP address is not sent to DB-IP or to any other third party for this purpose. IP Geolocation by DB-IP (<a href="https://db-ip.com" rel="noopener noreferrer">db-ip.com</a>).</p>
+        <p><strong>What the server returns.</strong> The server answers with the country code it found, or with no country if it could not find one, and with the purchase rules. The rules list the countries where the tokenized stocks of each issuer are not offered, including countries we exclude ourselves as a precaution, and whether purchases are switched on at all. They are the same for everyone. The Extension compares the country with the rules on your device.</p>
+        <p><strong>What we store.</strong> Our application does not save your IP address or the country it finds, and does not write them to its logs. We do not link them to a wallet address, username or install identifier, and we do not use them to record which screens you open. Your IP address (for IPv6, its network prefix) is held only in the server’s memory, for about one minute, to limit abusive request rates. Our web server does not keep access logs; if a request fails, its error log can record the IP address and the requested address, as described in <a href="#s-5">Section 5</a>.</p>
+        <p><strong>On your device.</strong> The Extension keeps the country it received only for the current browser session, in temporary session storage or in memory, together with the time of the check, and does not write it to persistent storage. The purchase rules, which contain no information about you, are stored on your device so that they still apply if our server cannot be reached. The Extension may show you the country it found, for example in a notice that purchases are not available.</p>
+        <p><strong>If no country is found.</strong> If the country cannot be determined, the Extension does not offer purchases of tokenized stocks.</p>
+        <p><strong>Private mode.</strong> While private mode is on (your Private Account is active), the Extension does not send this request.</p>
+        <p><strong>Why.</strong> We use the country solely to decide whether purchases of tokenized stocks are available to you. We do not use it for marketing, advertising, profiling, or resale.</p>
       </section>
 
       <section id="s-3" aria-labelledby="s-3-h">
@@ -242,6 +260,7 @@
           <li>Keep records of ATS purchases and of transactions sent through our servers, and prevent abuse of the network fees we pay on your behalf (<a href="#s-2-6">Section 2.6</a>)</li>
           <li>Provide private transfers, swaps and bridges in private mode</li>
           <li>Check recipient addresses for known risks</li>
+          <li>Decide whether purchases of tokenized stocks are available in your country (<a href="#s-2-7">Section 2.7</a>)</li>
           <li>Show transaction history, prices and images</li>
           <li>Maintain your profile (<a href="#s-2-5">Section 2.5</a>)</li>
           <li>Measure active installations, Extension version adoption and feature usage through the usage statistics described in <a href="#s-2-4">Section 2.4</a></li>
@@ -259,6 +278,7 @@
           <li>The third-party services listed in <a href="#s-6">Section 6</a></li>
         </ul>
         <p>Such sharing is limited to providing the features of the Extension.</p>
+        <p>We do not send your IP address to any third party to find your country (<a href="#s-2-7">Section 2.7</a>).</p>
         <p>We do not share usage statistics (<a href="#s-2-4">Section 2.4</a>) with third parties, other than service providers that host our infrastructure on our behalf. Only aggregated figures are available through our reporting interface. Access to the aggregated figures requires a secret key held by our team.</p>
         <p>We may disclose information if required by applicable law, regulation, or valid legal process.</p>
       </section>

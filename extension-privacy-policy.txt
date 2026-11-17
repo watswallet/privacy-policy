@@ -1,6 +1,6 @@
 PRIVACY POLICY
 
-Last updated: November 16, 2026
+Last updated: November 17, 2026
 
 This Privacy Policy describes how Alltoscan LLC ("we", "our", or "us") collects, uses, and protects information in connection with the WATS Wallet Chrome browser extension (the "Extension").
 
@@ -52,13 +52,13 @@ We do not try to match this data to real-world identities and do not use it for 
 
 Some transactions are sent through our transaction server. The records we keep of them are described in Section 2.6.
 
-The usage statistics described in Section 2.4 are separate from these interactions. They do not contain wallet addresses, transaction contents or blockchain network identifiers; like any internet request, they do reach our server together with your IP address, as explained in Section 2.4.
+The usage statistics described in Section 2.4 are separate from these interactions. They do not contain wallet addresses or transaction contents. They contain counts of transactions per blockchain network from a fixed list (see Section 2.4); like any internet request, they do reach our server together with your IP address, as explained in Section 2.4.
 
 The country check for tokenized stocks described in Section 2.7 is also separate from these interactions. Its request contains no wallet addresses, transaction contents or blockchain network identifiers; like any internet request, it reaches our server together with your IP address, as explained in Section 2.7.
 
 2.4 Usage Analytics
 
-If you agree, the Extension sends a small usage statistics message to backend infrastructure operated by Alltoscan LLC. It is used only to measure how many installations of the Extension are active, which Extension versions are in use, and how often its main features are used.
+If you agree, the Extension sends a small usage statistics message to backend infrastructure operated by Alltoscan LLC. It is used only to measure how many installations of the Extension are active, which Extension versions are in use, how often its main features are used, which screens and networks are used, and how often actions fail.
 
 What is sent. The usage statistics message contains only:
 
@@ -70,9 +70,19 @@ The language of your browser interface, as a language code that may include a re
 
 The number of actions since the last message, by type: transfers, swaps (including purchases and sales made in the Extension), bridge transfers, wallets imported and wallets created. A transfer, swap or bridge transfer is counted when it is submitted, whether or not it later succeeds.
 
-Nothing else is included in the message itself. The usage statistics never include wallet addresses, private keys, seed phrases, balances, amounts, tokens, blockchain networks, transaction contents, or websites you visit.
+The number of times the Extension window was opened and the wallet was unlocked with the correct password
 
-When it is sent. At most once per day. If a send fails, the Extension may try again later, but a successful report is sent no more than once per day. Action counts are kept on your device until they are sent or, if a send cannot be confirmed, discarded.
+The number of times you entered each of a fixed list of screens (for example Send, Swap, Bridge, Settings); screens not on the list are counted together as "other"; no screen content, address or token is included
+
+The number of transfers, swaps and bridge transfers that failed when they were sent (not cancellations by you, and not cases whose outcome is unknown)
+
+For successful transactions, the count per blockchain network from a fixed list of supported networks (other networks are counted together as "other"). The count is a total, without addresses, amounts, tokens or transaction identifiers
+
+Wrong-password attempts are not counted. Opening a dapp approval window (a window in which a website asks for your approval) is not counted as an opening of the Extension window. Screens entered in such a window are not counted, except the Stocks and Activities tabs of the wallet home screen when that screen is shown in the window. Unlocking the wallet with the correct password in such a window is counted as an unlock.
+
+Nothing else is included in the message itself. The usage statistics never include wallet addresses, private keys, seed phrases, balances, amounts, tokens, transaction contents, or websites you visit, and not any exact time of an event.
+
+When it is sent. At most once per day. If a send fails, the Extension may try again later, but a successful report is sent no more than once per day. Counts are kept on your device until they are sent or, if a send cannot be confirmed, discarded.
 
 What we store. For each installation we store only:
 
@@ -84,19 +94,19 @@ The most recently reported Extension version and language code
 
 The list of days (dates only) on which the installation sent its daily message
 
-The number of actions of each type reported on each of those days
+The count of each kind of action, screen entry and network reported on each of those days
 
 We do not store your IP address, browser user-agent, other request headers, or the exact time of the message in this record, and we do not link the install identifier to wallet addresses or to any other record we hold.
 
 IP address and request metadata. Like any internet request, the usage statistics message reaches our server together with standard network metadata, such as your IP address, your browser’s user-agent and the origin of the Extension. Our application does not save this metadata in the install record or write it to its logs; your IP address (for IPv6, its network prefix) is held only in the server’s memory, for up to 24 hours, to limit abusive request rates. Our web server does not keep access logs, so your IP address and the time of the request are not recorded in an access log. If a request fails, the web server’s error log can record its IP address and requested address; error logs are deleted automatically after about 14 days.
 
-Why. We use usage statistics solely to measure active installations, the adoption of Extension versions and how often the main features are used, so that we can maintain and improve the Extension. We analyze them in aggregated form, such as the number of active installations, how many installations return after a given number of days, the distribution of versions, and the number of actions and of installations performing them. We do not use them for marketing, advertising, profiling, or resale, and we do not send them to any third-party analytics or advertising service.
+Why. We use usage statistics solely to measure active installations, the adoption of Extension versions and how often the main features are used, which screens and networks are used, how often the Extension is opened and how often sending fails, so that we can maintain and improve the Extension. We analyze them in aggregated form, such as the number of active installations, how many installations return after a given number of days, the distribution of versions, and the number of actions and of installations performing them. We do not use them for marketing, advertising, profiling, or resale, and we do not send them to any third-party analytics or advertising service.
 
-Your control. Usage statistics stay off until you agree. The Extension asks for your agreement in a short dialog, and nothing is collected or sent before you agree or if you decline. You can turn usage statistics on or off at any time in Settings > Preferences. When you turn them off, the Extension sends no further usage statistics and deletes the install identifier and any unsent action counts stored on your device. If you turn them on again later, a new identifier is generated that is not connected to the previous one. Data that was already sent remains on our servers and is used only in aggregated statistics. Uninstalling the Extension or clearing its browser storage also removes the identifier and unsent action counts from your device.
+Your control. Usage statistics stay off until you agree. If we change what the statistics contain, we ask for your agreement again in the same dialog; until you agree again, only the kinds of data you already agreed to are collected and sent, and nothing new is collected. The Extension asks for your agreement in a short dialog, and nothing is collected or sent before you agree or if you decline. You can turn usage statistics on or off at any time in Settings > Preferences. When you turn them off, the Extension sends no further usage statistics and deletes the install identifier and any unsent counts stored on your device. If you turn them on again later, a new identifier is generated that is not connected to the previous one. Data that was already sent remains on our servers and is used only in aggregated statistics. Uninstalling the Extension or clearing its browser storage also removes the identifier and unsent counts from your device.
 
-Private mode. While private mode is on (your Private Account is active), the Extension does not count actions and sends no usage statistics message.
+Private mode. While private mode is on (your Private Account is active), the Extension does not count actions, openings, unlocks, screens or networks and sends no usage statistics message.
 
-Other data. Apart from the action counts described above, we do not collect behavioral analytics such as the screens you open or the buttons you press, browsing history, visited URLs, or advertising identifiers.
+Other data. Apart from the counts described above, we do not collect behavioral analytics such as the buttons you press, the content of any screen, browsing history, visited URLs, or advertising identifiers.
 
 2.5 Profile Data
 
@@ -180,7 +190,7 @@ Show transaction history, prices and images
 
 Maintain your profile (Section 2.5)
 
-Measure active installations, Extension version adoption and feature usage through the usage statistics described in Section 2.4
+Measure active installations, Extension version adoption and feature, screen and network usage and failure rates through the usage statistics described in Section 2.4
 
 We do not use data for marketing, advertising, profiling, or resale.
 
@@ -214,7 +224,7 @@ Profile records (Section 2.5) are stored on our backend until you ask us to dele
 
 Transaction and purchase records (Section 2.6) are stored on our backend. They are kept without a fixed time limit. Abuse prevention counters are kept for the periods described in Section 2.6.
 
-Usage statistics records (Section 2.4) are stored on our backend. Usage statistics records, including action counts, are deleted automatically once an installation has not sent a message for 13 months.
+Usage statistics records (Section 2.4) are stored on our backend. Usage statistics records, including action, screen and network counts, are deleted automatically once an installation has not sent a message for 13 months.
 
 Temporary technical logs are kept for security, debugging and service reliability.
 
